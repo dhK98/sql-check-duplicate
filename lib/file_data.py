@@ -1,5 +1,3 @@
-from lib.common import Common
-
 class FileData:
     recursion_number: int
     data: list

@@ -4,8 +4,7 @@ from lib.produce_file import FileProducer
 def main():
     print("start check duplicate")
     duplicate_checker = DuplicateChecker()
-    file_path = '../../test_tool/sampler/case/case_for_silcroad/dml/update/redm_459/case.sql'
-    # file_path = "./test/test1.sql"
+    file_path = "./test/test1.sql"
     duplicate_checker.analyze_sql_file(file_path)
     print(len(duplicate_checker.data_arr))
     print("================result=================")

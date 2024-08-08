@@ -1,9 +1,5 @@
 import lib.file_data as file_data
-from itertools import combinations
 from collections import deque
-
-# require: pip install numpy
-import numpy as np
 
 class DuplicateChecker:
     
