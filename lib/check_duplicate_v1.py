@@ -65,7 +65,7 @@ class DuplicateChecker:
         for line in lines:
             stripped_line = line.strip()
             if stripped_line.endswith(';'):
-                statement += ' ' + stripped_line
+                statement += ' ' + stripped_line + '\n'
                 merged_lines.append(statement.strip())
                 statement = ''
             else:
@@ -73,12 +73,6 @@ class DuplicateChecker:
         if statement:
             merged_lines.append(statement.strip())
         return merged_lines
-
-    def normalize_query(self, query):
-        return ' '.join(query.lower().strip().split())
-
-    def is_same_at_endpoint(self, p_arr, c_arr):
-        return p_arr[len(p_arr)-len(c_arr):] == c_arr if p_arr and c_arr  else False
 
     def compare_with_data(self, strings: deque):
         while strings:
@@ -197,13 +191,6 @@ class DuplicateChecker:
         intersection = [num for num in arr1 if num in set2]  # 첫 번째 배열의 순서를 유지하며 교집합 구하기
         return intersection
         
-
-    def is_sublist(self,sublist, mainlist):
-        sublist_length = len(sublist)
-        for i in range(len(mainlist) - sublist_length + 1):
-            if mainlist[i:i + sublist_length] == sublist:
-                return (True,i)
-        return (False,0)
 
     def add_file_data(self):
         fd = file_data.FileData()

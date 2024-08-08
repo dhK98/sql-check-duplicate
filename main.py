@@ -1,4 +1,5 @@
 from lib.check_duplicate_v1 import DuplicateChecker 
+from lib.produce_file import FileProducer
 
 def main():
     print("start check duplicate")
@@ -19,8 +20,9 @@ def main():
 
         print(duplicate_checker.data_arr[i].data)
         print(duplicate_checker.data_arr[i].recursion_number)
+    
     print(f"rest que1: {duplicate_checker.q1}")
     print(f"rest que1: {duplicate_checker.q2}")
-
-
+    file_producer = FileProducer(duplicate_checker.data_arr)
+    file_producer.create_file('copyfile1.sql')
 main()
