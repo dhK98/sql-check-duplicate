@@ -18,7 +18,7 @@
 
 ### 파일 생성 예제
 테스트 파일 
-```
+```sql
 CREATE TABLE T1(n1 NUMBER(4) primary key, v1 varchar(20));
 ALTER TABLE T1(n1 NUMBER(4) primary key, v1 varchar(20));
 CREATE TABLE T1(n1 NUMBER(4) primary key, v1 varchar(20));
@@ -34,8 +34,8 @@ ALTER TABLE T1(n1 NUMBER(4) primary key, v1 varchar(20));
 ALTER TABLE T1(n1 NUMBER(4) primary key, v1 varchar(20));
 CREATE TABLE T1(n1 NUMBER(4) primary key, v1 varchar(20));
 ```
-
-```생성파일
+생성파일
+```sql
 CREATE TABLE T1(n1 NUMBER(4) primary key, v1 varchar(20));
 ALTER TABLE T1(n1 NUMBER(4) primary key, v1 varchar(20));
 CREATE TABLE T1(n1 NUMBER(4) primary key, v1 varchar(20));
