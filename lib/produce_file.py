@@ -8,6 +8,8 @@ class FileProducer:
 
     def create_file(self, file_name):
         try:
+            if not os.path.exists('./copy_file'):
+                os.mkdir('copy_file')
             include_path_file_name = f"./copy_file/{file_name}"
             if not self.data_arr or len(self.data_arr) <= 0:
                 raise Exception("not exist data")

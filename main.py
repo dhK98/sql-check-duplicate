@@ -4,8 +4,8 @@ from lib.produce_file import FileProducer
 def main():
     print("start check duplicate")
     duplicate_checker = DuplicateChecker()
-    file_path = "./test/test1.sql"
-    duplicate_checker.analyze_sql_file(file_path)
+    test_file_path = "./test/test1.sql"
+    duplicate_checker.analyze_sql_file(test_file_path)
     print(len(duplicate_checker.data_arr))
     print("================result=================")
     for i in range(len(duplicate_checker.data_arr)):
