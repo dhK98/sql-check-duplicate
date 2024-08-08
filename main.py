@@ -3,8 +3,8 @@ from lib.check_duplicate_v1 import DuplicateChecker
 def main():
     print("start check duplicate")
     duplicate_checker = DuplicateChecker()
-    # file_path = '../../test_tool/sampler/case/case_for_silcroad/dml/update/redm_459/case.sql'
-    file_path = "./test/test.sql"
+    file_path = '../../test_tool/sampler/case/case_for_silcroad/dml/update/redm_459/case.sql'
+    # file_path = "./test/test1.sql"
     duplicate_checker.analyze_sql_file(file_path)
     print(len(duplicate_checker.data_arr))
     print("================result=================")
@@ -19,6 +19,8 @@ def main():
 
         print(duplicate_checker.data_arr[i].data)
         print(duplicate_checker.data_arr[i].recursion_number)
+    print(f"rest que1: {duplicate_checker.q1}")
+    print(f"rest que1: {duplicate_checker.q2}")
 
 
 main()
