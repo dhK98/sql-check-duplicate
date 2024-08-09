@@ -8,9 +8,15 @@ class FileProducer:
 
     def create_file(self, file_name):
         try:
-            if not os.path.exists('./copy_file'):
-                os.mkdir('copy_file')
-            include_path_file_name = f"./copy_file/{file_name}"
+            if not os.path.exists('./copy_files'):
+                os.mkdir('copy_files')
+            idx = 1
+            while True:
+                file_name_idx = f"{file_name}_{idx}"
+                if not os.path.exists('./copy_files/'+file_name_idx):
+                    break
+                idx += 1
+            include_path_file_name = f"./copy_files/{file_name_idx}"
             if not self.data_arr or len(self.data_arr) <= 0:
                 raise Exception("not exist data")
             # formater => create sql
@@ -35,3 +41,4 @@ class FileProducer:
                 string_data += ("\t\t"+data_el+"\n")
             string_data += "\tEND LOOP;\n END;\n"
             return string_data
+        (file_name_idx)
