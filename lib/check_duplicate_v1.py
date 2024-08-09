@@ -114,9 +114,7 @@ class DuplicateChecker:
                         if len(q1_q2_intersection) > 0 :
                             for num in q1_q2_intersection:
                                 self.sort_with_intersection(num)
-                                if len(self.q1) > 0 and len(self.q2) > 0:
-                                    continue
-                                else:
+                                if len(self.q1) <= 0 and len(self.q2) <= 0:
                                     break
                         else:                        
                             self.q1.append(self.q2.popleft())
