@@ -76,7 +76,3 @@ DECLARE
 ALTER TABLE T1(n1 NUMBER(4) primary key, v1 varchar(20));
 CREATE TABLE T1(n1 NUMBER(4) primary key, v1 varchar(20));
 ```
-
-#### Github Link
-
-\- 전체 코드 : [https://github.com/dhK98/sql-check-duplicate](https://github.com/dhK98/sql-check-duplicate)
